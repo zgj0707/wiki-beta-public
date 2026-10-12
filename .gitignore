@@ -1,0 +1,14 @@
+feasibility/resolved-sync.json
+feasibility/draft_*_folder/
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+logs/
+miaoda-source/
+evidence-record-list.ndjson
+evidence-record-list.ndjson.manifest.json
+evidence-record-list.manifest.json
+feasibility/mvp-demo-*.ndjson
+feasibility/mvp-demo-*.manifest.json

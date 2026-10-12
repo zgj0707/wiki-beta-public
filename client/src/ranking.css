@@ -1,0 +1,193 @@
+/* 榜单数据内容样式（数据监控与榜单 — 飞书规范对齐）
+   所有选择器均 scoped 在 .ranking-content 之下，避免污染全局。 */
+.ranking-content {
+  --ranking-accent: var(--primary);
+  --ranking-accent-soft: color-mix(in srgb, var(--primary) 10%, var(--background));
+  --ranking-card: var(--card);
+  --ranking-border: var(--border);
+  --ranking-border-soft: color-mix(in srgb, var(--border) 72%, transparent);
+  --ranking-text: var(--foreground);
+  --ranking-muted: var(--muted-foreground);
+  --ranking-muted-2: color-mix(in srgb, var(--muted-foreground) 82%, var(--background));
+  --ranking-header: var(--muted);
+  --ranking-header-foreground: var(--muted-foreground);
+  --ranking-row-even: color-mix(in srgb, var(--muted) 30%, var(--card));
+  --ranking-row-hover: color-mix(in srgb, var(--primary) 6%, var(--card));
+  color: var(--ranking-text);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+}
+
+/* Explicit dark scope keeps the embedded ranking surfaces tied to the site
+   palette even when a future board adds more local declarations. */
+.dark .ranking-content {
+  color-scheme: dark;
+  --ranking-accent: var(--primary);
+  --ranking-accent-soft: color-mix(in srgb, var(--primary) 16%, var(--card));
+  --ranking-card: var(--card);
+  --ranking-border: var(--border);
+  --ranking-border-soft: color-mix(in srgb, var(--border) 84%, transparent);
+  --ranking-text: var(--foreground);
+  --ranking-muted: var(--muted-foreground);
+  --ranking-muted-2: color-mix(in srgb, var(--muted-foreground) 88%, var(--background));
+  --ranking-header: color-mix(in srgb, var(--primary) 24%, var(--card));
+  --ranking-header-foreground: var(--foreground);
+  --ranking-row-even: color-mix(in srgb, var(--foreground) 3%, var(--background));
+  --ranking-row-hover: color-mix(in srgb, var(--primary) 10%, var(--background));
+}
+
+/* ====== 顶部导航/说明（周期切换器共用） ====== */
+.ranking-content .note {
+  background: var(--ranking-accent-soft);
+  border: 1px solid color-mix(in srgb, var(--ranking-accent) 28%, var(--ranking-border));
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: var(--ranking-muted);
+  font-size: 12.5px;
+  margin-bottom: 18px;
+  white-space: pre-wrap;
+}
+.ranking-content .period-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 22px;
+}
+.ranking-content .period-nav-btn {
+  display: inline-block;
+  padding: 7px 14px;
+  border: 1px solid var(--ranking-border);
+  border-radius: 999px;
+  background: var(--ranking-card);
+  color: var(--ranking-text);
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.15s;
+  font-family: inherit;
+}
+.ranking-content .period-nav-btn:hover {
+  border-color: var(--ranking-accent);
+  color: var(--ranking-accent);
+}
+.ranking-content .period-nav-btn.active {
+  border-color: var(--ranking-accent);
+  background: var(--ranking-accent-soft);
+  color: var(--ranking-accent);
+}
+.ranking-content .empty {
+  color: var(--ranking-muted-2);
+  padding: 40px;
+  text-align: center;
+}
+
+/* ====== AppStore 表格 ====== */
+.ranking-content .table-card {
+  background: var(--ranking-card);
+  border: 1px solid var(--ranking-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.ranking-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  table-layout: fixed;
+}
+.ranking-content thead th {
+  background: var(--ranking-header);
+  color: var(--ranking-header-foreground);
+  font-weight: 600;
+  text-align: left;
+  padding: 8px 8px;
+  border-bottom: 1px solid var(--ranking-border);
+  white-space: normal;
+  word-break: break-word;
+  vertical-align: top;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  box-shadow: inset 0 -1px 0 var(--ranking-border);
+}
+.ranking-content tbody td {
+  padding: 8px 8px;
+  border-bottom: 1px solid var(--ranking-border-soft);
+  vertical-align: top;
+  white-space: normal;
+  word-break: break-word;
+}
+.ranking-content tbody tr:last-child td { border-bottom: none; }
+.ranking-content tbody tr:hover { background: var(--ranking-row-hover); }
+.ranking-content tbody tr:nth-child(even):not(:hover) { background: var(--ranking-row-even); }
+.ranking-content td,
+.ranking-content th { font-variant-numeric: tabular-nums; }
+.ranking-content .rank {
+  font-weight: 700;
+  color: var(--ranking-accent);
+  text-align: center;
+  width: 56px;
+}
+
+/* ====== 微信 like 品类卡片 ====== */
+.ranking-content .like-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+.ranking-content .like-card {
+  background: var(--ranking-card);
+  border: 1px solid var(--ranking-border);
+  border-radius: 12px;
+  padding: 14px 16px 12px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.ranking-content .like-card:hover {
+  border-color: var(--ranking-accent);
+  box-shadow: 0 4px 14px -8px color-mix(in srgb, var(--ranking-accent) 45%, transparent);
+}
+.ranking-content .like-name {
+  margin: 0 0 10px;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--ranking-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.ranking-content .like-name::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ranking-accent);
+}
+.ranking-content .like-games {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ranking-content .like-games li {
+  padding: 8px 10px;
+  background: color-mix(in srgb, var(--foreground) 4%, var(--background));
+  border: 1px solid var(--ranking-border-soft);
+  border-radius: 8px;
+}
+.ranking-content .game-name { font-weight: 600; font-size: 13.5px; color: var(--ranking-text); }
+.ranking-content .game-desc { margin-top: 2px; color: var(--ranking-muted); font-size: 12px; line-height: 1.55; }
+.ranking-content .like-empty { color: var(--ranking-muted-2); font-size: 12px; text-align: center; padding: 18px 0; }
+
+/* ====== Steam：iframe + srcdoc 渲染自包含 HTML ====== */
+.ranking-content .steam-iframe {
+  width: 100%;
+  height: calc(100vh - 220px);
+  min-height: 600px;
+  border: 1px solid var(--ranking-border);
+  border-radius: 12px;
+  background: var(--background);
+  display: block;
+}

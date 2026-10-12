@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.svg" />
+    <title>W Research</title>
+    <script>
+      window.__platform__ = {{{__platform__}}};
+      window.__INITIAL_DATA__ = {{{__initial_data__}}};
+    </script>
+    <script>
+      (() => {
+        try {
+          const preference =
+            localStorage.getItem('product-research-kb-theme') || 'system';
+          const resolved =
+            preference === 'system'
+              ? window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+              : preference;
+          document.documentElement.classList.toggle(
+            'dark',
+            resolved === 'dark',
+          );
+          document.documentElement.style.colorScheme = resolved;
+        } catch (_) {
+          // Keep the browser default if storage or matchMedia is unavailable.
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/client/src/index.tsx"></script>
+  </body>
+</html>

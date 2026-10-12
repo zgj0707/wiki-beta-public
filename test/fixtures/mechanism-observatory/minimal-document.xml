@@ -1,0 +1,54 @@
+<document document_id="Rq6Hd9UyuoQRsPxdjNRclnLxn2b" revision="459">
+  <h1 block_id="scope-1">研究范围与阅读方式</h1>
+  <p>只记录可回放的原始材料与明确标注的研究判断。</p>
+
+  <h1 block_id="games-1">游戏分析条目（正文）</h1>
+  <h2 block_id="game-101">Garden Signals</h2>
+  <table id="game-table-101">
+    <thead><tr><th><p>分析字段</p></th><th><p>题材中立观察</p></th></tr></thead>
+    <tbody>
+      <tr><td><p>条目编号</p></td><td><p>1</p></td></tr>
+      <tr><td><p>游戏名</p></td><td><p>Garden Signals</p></td></tr>
+      <tr><td><p>原始材料 / 来源</p></td><td><p><a href="https://store.steampowered.com/app/10101/Garden_Signals/">Steam 页面</a></p></td></tr>
+      <tr><td><p>核心玩法截图</p></td><td><p><img alt="临时封面" src="https://tenant.feishu.cn/file/cover.png?authcode=secret" /></p></td></tr>
+      <tr><td><p>核心钩子</p></td><td><p>把摆放和修复组合成可见的即时变化。</p></td></tr>
+      <tr><td><p>广告瞬间</p></td><td><p>拖动一块花圃，画面立刻开花。</p><p>失败后保留一条可见的修复线索。</p></td></tr>
+      <tr><td><p>可视化程度</p></td><td><p>中高</p></td></tr>
+      <tr><td><p>操作门槛</p></td><td><p>单指拖放。</p></td></tr>
+      <tr><td><p>戏剧来源</p></td><td><p>有限空间中的布局取舍。</p></td></tr>
+      <tr><td><p>失败反馈</p></td><td><p>错误摆放立即阻塞下一步。</p></td></tr>
+      <tr><td><p>成长驱动</p></td><td><p>逐步解锁更复杂的组合。</p></td></tr>
+      <tr><td><p>多人价值</p></td><td><p>协作分工的价值待验证。</p></td></tr>
+      <tr><td><p>买量价值</p></td><td><p>可展示前后对比，但实际表现待验证。</p></td></tr>
+      <tr><td><p>题材中立的通用机制公式</p></td><td><p>可见变化反馈 × 低门槛操作 × 逐步增加约束。</p></td></tr>
+      <tr><td><p>待验证问题</p></td><td><p>新用户是否能在首轮理解目标？</p><p>失败反馈是否足够促成再次尝试？</p></td></tr>
+    </tbody>
+  </table>
+
+  <h2 block_id="game-202">旧条目示例</h2>
+  <table id="game-table-202">
+    <thead><tr><th><p>分析字段</p></th><th><p>题材中立观察</p></th></tr></thead>
+    <tbody>
+      <tr><td><p>游戏名</p></td><td><p>旧条目示例</p></td></tr>
+      <tr><td><p>3秒素材</p></td><td><p>画面事件：一块区域突然塌陷。</p><p>呈现优势：变化清楚可见。</p></td></tr>
+      <tr><td><p>试玩循环</p></td><td><p>操作门槛：点击。</p><p>失败反馈：入口立刻关闭。</p><p>成长驱动：解锁下一种工具。</p></td></tr>
+      <tr><td><p>抽离复用</p></td><td><p>戏剧来源：倒计时压力。</p><p>题材中立的通用机制公式：倒计时 × 资源取舍。</p></td></tr>
+      <tr><td><p>买量迁移</p></td><td><p>买量价值：前后结果对比。</p><p>多人价值：共同规划。</p><p>待验证：多人沟通成本。</p></td></tr>
+    </tbody>
+  </table>
+
+  <h2 block_id="template-1">后续游戏分析统一模板（不重要）</h2>
+  <p>游戏名：不应被识别。</p>
+  <h2 block_id="todo-1">待分析游戏清单</h2>
+  <p>游戏名：也不应被识别。</p>
+
+  <h1 block_id="trend-1">休闲游戏供给趋势观察</h1>
+  <p>以下是已读取的年度快照。</p>
+  <table block_id="table-1">
+    <thead><tr><th>年份</th><th>标签</th><th>发布数</th><th>同比</th><th>同期</th></tr></thead>
+    <tbody>
+      <tr><td>2025</td><td>Indie</td><td>100</td><td>12%</td><td>-4%</td></tr>
+      <tr><td>2025</td><td>Organizing</td><td></td><td></td><td>8%</td></tr>
+    </tbody>
+  </table>
+</document>

@@ -1,0 +1,78 @@
+/* 顶栏「动态与发现」页签醒目特效（非全包版）：
+   三层动效——① 页签文字金色渐变流动（background-clip: text）；
+   ② Orbit 图标金色呼吸；③ 底部一条金色流光下划线扫过。
+   不包裹整个页签（无描边、无底色），hover/focus 暂停动效保持可读。
+   金色取中间亮度（#d48806/#faad14），浅深主题均可读。 */
+.nav-labs-glow {
+  position: relative;
+}
+
+.nav-labs-glow > span {
+  background-image: linear-gradient(
+    90deg,
+    #d48806,
+    #faad14,
+    #ffd666,
+    #d48806
+  );
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: nav-labs-text 6s linear infinite;
+}
+
+.nav-labs-glow > svg {
+  animation: nav-labs-icon 3s ease-in-out infinite;
+}
+
+.nav-labs-glow::after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #faad14,
+    #d48806,
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: nav-labs-line 3s linear infinite;
+}
+
+@keyframes nav-labs-text {
+  to {
+    background-position: 300% 0;
+  }
+}
+
+@keyframes nav-labs-icon {
+  0%,
+  100% {
+    color: #d48806;
+  }
+  50% {
+    color: #faad14;
+  }
+}
+
+@keyframes nav-labs-line {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.nav-labs-glow:hover > span,
+.nav-labs-glow:hover > svg,
+.nav-labs-glow:hover::after,
+.nav-labs-glow:focus-visible > span,
+.nav-labs-glow:focus-visible > svg,
+.nav-labs-glow:focus-visible::after {
+  animation-play-state: paused;
+}

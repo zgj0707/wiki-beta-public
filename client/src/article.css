@@ -1,0 +1,202 @@
+/* 文章正文渲染规范（对齐飞书云文档排版） */
+.feishu-doc {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--foreground);
+  word-break: break-word;
+}
+.feishu-doc > *:first-child {
+  margin-top: 0;
+}
+.feishu-doc h1,
+.feishu-doc h2,
+.feishu-doc h3,
+.feishu-doc h4 {
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 1.6em 0 0.7em;
+  color: var(--foreground);
+}
+.feishu-doc h1 {
+  font-size: 22px;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+.feishu-doc h2 {
+  font-size: 19px;
+  padding-left: 0.6em;
+  border-left: 4px solid var(--primary);
+}
+.feishu-doc h3 {
+  font-size: 16.5px;
+}
+.feishu-doc h4 {
+  font-size: 15px;
+  color: var(--muted-foreground);
+}
+.feishu-doc p {
+  margin: 0.85em 0;
+}
+.feishu-doc.source-document-markdown p,
+.feishu-doc.source-document-markdown li {
+  white-space: pre-wrap;
+}
+.feishu-doc .doc-focus-target {
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--primary) 12%, transparent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary) 10%, transparent);
+  transition: background 180ms ease, box-shadow 180ms ease;
+}
+.feishu-doc h1,
+.feishu-doc h2,
+.feishu-doc h3,
+.feishu-doc p {
+  position: relative;
+}
+.doc-anchor {
+  display: inline-flex;
+  margin-left: 0.35rem;
+  vertical-align: middle;
+  color: var(--muted-foreground);
+  opacity: 0;
+  transition: opacity 120ms ease, color 120ms ease;
+}
+.feishu-doc h1:hover .doc-anchor,
+.feishu-doc h2:hover .doc-anchor,
+.feishu-doc h3:hover .doc-anchor,
+.feishu-doc p:hover .doc-anchor {
+  opacity: 1;
+}
+.doc-anchor:hover {
+  color: var(--primary);
+}
+.doc-anchor-paragraph {
+  margin-left: 0.25rem;
+}
+.feishu-doc ul,
+.feishu-doc ol {
+  margin: 0.85em 0;
+  padding-left: 1.6em;
+}
+.feishu-doc li {
+  margin: 0.35em 0;
+}
+.feishu-doc ul li::marker {
+  color: var(--primary);
+}
+.feishu-doc a {
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--primary) 35%, transparent);
+}
+.feishu-doc a:hover {
+  border-bottom-color: var(--primary);
+}
+.feishu-doc blockquote {
+  margin: 1em 0;
+  padding: 0.75em 1em;
+  background: color-mix(in srgb, var(--primary) 8%, var(--background));
+  border-left: 4px solid var(--primary);
+  border-radius: 0 8px 8px 0;
+  color: var(--foreground);
+}
+.feishu-doc blockquote p {
+  margin: 0.3em 0;
+}
+.feishu-doc hr {
+  margin: 1.6em 0;
+  border: none;
+  border-top: 1px solid var(--border);
+}
+.feishu-doc code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  background: color-mix(in srgb, var(--foreground) 8%, transparent);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+.feishu-doc pre {
+  margin: 1em 0;
+  padding: 1em;
+  background: var(--code-background, #1d2129);
+  color: var(--code-foreground, #e5e6eb);
+  border-radius: 8px;
+  overflow-x: auto;
+}
+.feishu-doc pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+/* 表格：横向滚动 + 斑马纹 + 表头底色，对齐飞书多维表格观感 */
+.feishu-doc .doc-table-wrap {
+  margin: 1.1em 0;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.feishu-doc table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.feishu-doc thead th {
+  background: color-mix(in srgb, var(--foreground) 5%, var(--background));
+  font-weight: 600;
+  text-align: left;
+  padding: 0.6em 0.8em;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.feishu-doc tbody td {
+  padding: 0.55em 0.8em;
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  vertical-align: top;
+}
+.feishu-doc tbody tr:nth-child(even) {
+  background: color-mix(in srgb, var(--foreground) 3%, var(--background));
+}
+.feishu-doc tbody tr:hover {
+  background: color-mix(in srgb, var(--primary) 6%, var(--background));
+}
+/* 图片：圆角 + 图注；加载失败显示占位框（避免飞书内部图链 403 造成版式错乱） */
+.feishu-doc .doc-img {
+  margin: 1.1em 0;
+  text-align: center;
+}
+.feishu-doc .doc-img img {
+  max-width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+.feishu-doc .doc-img figcaption {
+  margin-top: 0.5em;
+  font-size: 12.5px;
+  color: var(--muted-foreground);
+  line-height: 1.6;
+}
+.feishu-doc .doc-img.broken img {
+  display: none;
+}
+.feishu-doc .doc-img.broken {
+  padding: 1.4em;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--foreground) 3%, var(--background));
+  color: var(--muted-foreground);
+  font-size: 13px;
+}
+
+/* Keep the editor/reader code surface legible when the site palette changes. */
+.dark .feishu-doc pre {
+  border: 1px solid var(--border);
+  background: var(--code-background);
+  color: var(--code-foreground);
+}
+
+.dark .feishu-doc .doc-table-wrap,
+.dark .feishu-doc .doc-img img {
+  border-color: var(--border);
+}
+
+/* 实体标注样式（.entity-light）已随 v2 实体链路退场（2026-10-09）移除。 */

@@ -1,0 +1,91 @@
+/* 报头衬线标题字体：思源宋体 800 自托管子集（3 个 unicode 分包，共 ~107KB，
+   随首页 chunk 懒加载、仅命中字符时下载）。原 @fontsource 整包引入会产生
+   196 个字体资产，平台构建 10 分钟硬超时（release 7694224483289811929 failed
+   实测），故只保留覆盖报头「产品研究知识库」等常用字符的 115/116/118 三个分包。
+   unicode-range 必须保留：同名同字重的 @font-face 靠它区分生效。 */
+@font-face {
+  font-family: 'Noto Serif SC Subset';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../assets/fonts/noto-serif-sc-115-800-normal.woff2') format('woff2');
+  unicode-range: U+25, U+4e14, U+4e1d, U+4e3d, U+4e49, U+4e60, U+4e9a, U+4eb2,
+    U+4ec5, U+4efd, U+4f3c, U+4f4f, U+4f8b, U+4fbf, U+5019, U+5145, U+514b,
+    U+516b, U+516d, U+5174, U+5178, U+517b, U+5199, U+519b, U+51b3, U+51b5,
+    U+5207, U+5212, U+5219, U+521d, U+52bf, U+533b, U+5343, U+5347, U+534a,
+    U+536b, U+5370, U+53e4, U+53f2, U+5403, U+542c, U+547d, U+54a8, U+54cd,
+    U+54ea, U+552e, U+56f4, U+5747, U+575b, U+5883, U+589e, U+5931, U+5947,
+    U+5956-5957, U+5a92, U+5b83, U+5ba4, U+5bb3, U+5bcc, U+5c14, U+5c1a,
+    U+5c3d, U+5c40, U+5c45, U+5c5e, U+5df4, U+5e72, U+5e95, U+5f80, U+5f85,
+    U+5fb7, U+5fd7, U+601d, U+626b, U+627f, U+62c9, U+62cd, U+6309, U+63a7,
+    U+6545, U+65ad, U+65af, U+65c5, U+666e, U+667a, U+670b, U+671b, U+674e,
+    U+677f, U+6781, U+6790, U+6797, U+6821, U+6838-6839, U+697c, U+6b27,
+    U+6b62, U+6bb5, U+6c7d, U+6c99, U+6d4b, U+6d4e, U+6d6a, U+6e29, U+6e2f,
+    U+6ee1, U+6f14, U+6f2b, U+72b6, U+72ec, U+7387, U+7533, U+753b, U+76ca,
+    U+76d8, U+7701, U+773c, U+77ed, U+77f3, U+7814, U+793c, U+79bb, U+79c1,
+    U+79d8, U+79ef, U+79fb, U+7a76, U+7b11, U+7b54, U+7b56, U+7b97, U+7bc7,
+    U+7c73, U+7d20, U+7eaa, U+7ec8, U+7edd, U+7eed, U+7efc, U+7fa4, U+804c,
+    U+8058, U+80cc, U+8111, U+817e, U+826f, U+8303, U+843d, U+89c9, U+89d2,
+    U+8ba2, U+8bbf, U+8bc9, U+8bcd, U+8be6, U+8c22, U+8c61, U+8d22, U+8d26-8d27,
+    U+8d8a, U+8f6f, U+8f7b, U+8f83, U+8f91, U+8fb9, U+8fd4, U+8fdc, U+9002,
+    U+94b1, U+9519, U+95ed, U+961f, U+9632-9633, U+963f, U+968f-9690, U+96be,
+    U+9876, U+9884, U+98de, U+9988, U+9999, U+9ec4, U+ff1b;
+}
+
+@font-face {
+  font-family: 'Noto Serif SC Subset';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../assets/fonts/noto-serif-sc-116-800-normal.woff2') format('woff2');
+  unicode-range: U+2b, U+40, U+3000, U+300a-300b, U+4e16, U+4e66, U+4e70,
+    U+4e91-4e92, U+4e94, U+4e9b, U+4ec0, U+4eca, U+4f01, U+4f17-4f18, U+4f46,
+    U+4f4e, U+4f9b, U+4fee, U+503c, U+5065, U+50cf, U+513f, U+5148, U+518d,
+    U+51c6, U+51e0, U+5217, U+529e-529f, U+5341, U+534f, U+5361, U+5386, U+53c2,
+    U+53c8, U+53cc, U+53d7-53d8, U+53ea, U+5404, U+5411, U+5417, U+5427,
+    U+5468, U+559c, U+5668, U+56e0, U+56e2, U+56ed, U+5740, U+57fa, U+58eb,
+    U+5904, U+592a, U+59cb, U+5a31, U+5b58, U+5b9d, U+5bc6, U+5c71, U+5dde,
+    U+5df1, U+5e08, U+5e26, U+5e2e, U+5e93, U+5e97, U+5eb7, U+5f15, U+5f20,
+    U+5f3a, U+5f62, U+5f69, U+5f88, U+5f8b, U+5fc5, U+600e, U+620f, U+6218,
+    U+623f, U+627e, U+628a, U+62a4, U+62db, U+62e9, U+6307, U+6362, U+636e,
+    U+64ad, U+6539, U+653f, U+6548, U+6574, U+6613, U+6625, U+663e, U+666f,
+    U+672a, U+6750, U+6784, U+6a21, U+6b3e, U+6b65, U+6bcf, U+6c11, U+6c5f,
+    U+6df1, U+706b, U+7167, U+724c, U+738b, U+73a9, U+73af, U+7403, U+7537,
+    U+754c, U+7559, U+767d, U+7740, U+786e, U+795e, U+798f, U+79f0, U+7aef,
+    U+7b7e, U+7bb1, U+7ea2, U+7ea6, U+7ec4, U+7ec6, U+7ecd, U+7edc, U+7ef4,
+    U+8003, U+80b2, U+81f3-81f4, U+822a, U+827a, U+82f1, U+83b7, U+8425,
+    U+89c2, U+89c8, U+8ba9, U+8bb8, U+8bc6, U+8bd5, U+8be2, U+8be5, U+8bed,
+    U+8c03, U+8d23, U+8d2d, U+8d34, U+8d70, U+8db3, U+8fbe, U+8fce, U+8fd1,
+    U+8fde, U+9001, U+901f-9020, U+90a3, U+914d, U+91c7, U+94fe, U+9500,
+    U+952e, U+9605, U+9645, U+9662, U+9664, U+9700, U+9752, U+975e, U+97f3,
+    U+9879, U+9886, U+98df, U+9a6c, U+9a8c, U+9ed1, U+9f99;
+}
+
+@font-face {
+  font-family: 'Noto Serif SC Subset';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../assets/fonts/noto-serif-sc-118-800-normal.woff2') format('woff2');
+  unicode-range: U+d, U+3e, U+5f, U+7c, U+a0, U+a9, U+4e09-4e0b, U+4e0d-4e0e,
+    U+4e13, U+4e1a, U+4e2a, U+4e3a-4e3b, U+4e4b, U+4e86, U+4e8e, U+4ea7, U+4eba,
+    U+4ee4-4ee5, U+4eec, U+4f1a, U+4f4d, U+4f53, U+4f5c, U+4f60, U+4fe1,
+    U+5165, U+5168, U+516c, U+5173, U+5176, U+5185, U+51fa, U+5206, U+5230,
+    U+5236, U+524d, U+529b, U+52a0-52a1, U+52a8, U+5316, U+533a, U+53cb, U+53d1,
+    U+53ef, U+53f7-53f8, U+5408, U+540c-540e, U+544a, U+548c, U+54c1,
+    U+56de, U+56fd-56fe, U+5728, U+5730, U+5907, U+5916, U+591a, U+5927, U+5929,
+    U+597d, U+5982, U+5b50, U+5b66, U+5b89, U+5b9a, U+5b9e, U+5ba2, U+5bb6,
+    U+5bf9, U+5c0f, U+5de5, U+5e02, U+5e73-5e74, U+5e7f, U+5ea6, U+5f00,
+    U+5f0f, U+5f53, U+5f55, U+5fae, U+5fc3, U+6027, U+606f, U+60a8, U+60c5,
+    U+610f, U+6210-6211, U+6237, U+6240, U+624b, U+6280, U+62a5, U+63a5,
+    U+63a8, U+63d0, U+6536, U+6570, U+6587, U+65b9, U+65e0, U+65f6, U+660e,
+    U+662d, U+662f, U+66f4, U+6700, U+670d, U+672c, U+673a, U+6743, U+6765,
+    U+679c, U+682a, U+6b21, U+6b63, U+6cbb, U+6cd5, U+6ce8, U+6d3b, U+70ed,
+    U+7247-7248, U+7269, U+7279, U+73b0, U+7406, U+751f, U+7528, U+7535,
+    U+767b, U+76f8, U+770b, U+77e5, U+793e, U+79d1, U+7ad9, U+7b49, U+7c7b,
+    U+7cfb, U+7ebf, U+7ecf, U+7f8e, U+8005, U+8054, U+80fd, U+81ea, U+85cf,
+    U+884c, U+8868, U+8981, U+89c6, U+8bba, U+8bdd, U+8bf4, U+8bf7, U+8d44,
+    U+8fc7, U+8fd8-8fd9, U+8fdb, U+901a, U+9053, U+90e8, U+91d1, U+957f,
+    U+95e8, U+95ee, U+95f4, U+9762, U+9875, U+9898, U+9996, U+9ad8, U+ff01,
+    U+ff08-ff09;
+}

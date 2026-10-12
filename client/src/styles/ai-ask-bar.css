@@ -1,0 +1,38 @@
+/* 顶栏 AI 问答框（V1 渐变呼吸边框）：
+   主色→强调色渐变描边缓慢流动 + 光晕呼吸；hover/focus 暂停动效并给
+   稳定光晕，保证输入时安静。内层填充用 --background，暗色模式自动适配。 */
+.ai-ask-bar {
+  border: 1.5px solid transparent;
+  border-radius: 12px;
+  background-image:
+    linear-gradient(var(--background), var(--background)),
+    linear-gradient(90deg, #165dff, #722ed1, #36cfc9, #165dff);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-size: 100% 100%, 300% 100%;
+  animation:
+    ai-ask-border 6s linear infinite,
+    ai-ask-glow 3s ease-in-out infinite;
+}
+
+@keyframes ai-ask-border {
+  to {
+    background-position: 0 0, 300% 0;
+  }
+}
+
+@keyframes ai-ask-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(22, 93, 255, 0);
+  }
+  50% {
+    box-shadow: 0 0 18px 2px rgba(114, 46, 209, 0.25);
+  }
+}
+
+.ai-ask-bar:hover,
+.ai-ask-bar:focus-within {
+  animation-play-state: paused;
+  box-shadow: 0 0 14px 2px rgba(22, 93, 255, 0.28);
+}
